@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 {
 	FILE *fptr;
 	size_t len;
+	ssize_t line;
 	char *buffer = NULL;
 
 	len = 0;
@@ -29,7 +30,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	while ((getline(&buffer, &len, fptr)) != -1)
+	while ((line = getline(&buffer, &len, fptr)) != -1)
 		factorize(buffer);
 
 	fclose(fptr);
