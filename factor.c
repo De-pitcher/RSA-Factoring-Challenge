@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	size_t len;
 	char *buffer = NULL;
 
-    len = 0;
+	len = 0;
 
 	if (argc != 2)
 	{
