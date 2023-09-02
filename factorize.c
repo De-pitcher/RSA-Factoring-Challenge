@@ -8,7 +8,7 @@
 
 void factorize(char *buffer)
 {
-	long int num, i;
+	__uint32_t num, i;
 
 	num = _atoi(buffer);
 
@@ -16,7 +16,7 @@ void factorize(char *buffer)
 	{
 		if (num % i == 0)
 		{
-			printf("%ld=%ld*%ld\n", num, num / i, i);
+			printf("%d=%d*%d\n", num, num / i, i);
 			return;
 		}
 	}
