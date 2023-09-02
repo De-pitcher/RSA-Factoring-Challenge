@@ -8,19 +8,19 @@
 
 void factorize(char *buffer)
 {
-    long int n, p, q;
+	long int n, p, q;
 
-    n = _atoi(buffer);
+	n = _atoi(buffer);
 
-    for (p = 2; p <= n /2; p++)
-    {
-        if (n % p == 0 && is_prime(p) && is_prime(n / p))
-        {
-            q = n / p;
-            printf("%ld=%ld*%ld\n", n, q, p);
-            return;
-        }
-    }
+	for (p = 2; p <= n / 2; p++)
+	{
+		if (n % p == 0 && is_prime(p) && is_prime(n / p))
+		{
+			q = n / p;
+			printf("%ld=%ld*%ld\n", n, q, p);
+			return;
+		}
+	}
 }
 
 /**
